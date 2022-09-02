@@ -8,8 +8,8 @@ using UnityEngine.EventSystems;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    Vector2 playerVelocity;
-    float movementSpeed = 5.5f;
+    public Vector2 playerVelocity;
+    float movementSpeed = 10f;
 
 
     private void Awake()
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        rb.velocity = playerVelocity;
+        rb.velocity = (playerVelocity.normalized * movementSpeed);
     }
 
     void EventHandler()
@@ -42,42 +42,42 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveRight()
     {
-        playerVelocity += Vector2.right * movementSpeed;
+        playerVelocity += Vector2.right;
     }
 
     void MoveLeft()
     {
-        playerVelocity += Vector2.left * movementSpeed;
+        playerVelocity += Vector2.left;
     }
 
     void MoveDown()
     {
-        playerVelocity += Vector2.down * movementSpeed;
+        playerVelocity += Vector2.down;
     }
 
     void MoveUp()
     {
-        playerVelocity += Vector2.up * movementSpeed;
+        playerVelocity += Vector2.up;
     }
 
     void MoveRightStop()
     {
-        playerVelocity -= Vector2.right * movementSpeed;
+        playerVelocity -= Vector2.right;
     }
 
     void MoveLeftStop()
     {
-        playerVelocity -= Vector2.left * movementSpeed;
+        playerVelocity -= Vector2.left;
     }
 
     void MoveDownStop()
     {
-        playerVelocity -= Vector2.down * movementSpeed;
+        playerVelocity -= Vector2.down;
     }
 
     void MoveUpStop()
     {
-        playerVelocity -= Vector2.up * movementSpeed;
+        playerVelocity -= Vector2.up;
     }
 
 }
