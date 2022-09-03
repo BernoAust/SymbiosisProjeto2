@@ -12,6 +12,7 @@ public class PlayerBase : MonoBehaviour
     private void Awake()
     {
         PlayerEvents.playerDamageTaken.AddListener(TakeDamage);
+        PlayerEvents.playerDeath.AddListener(OnPlayerDeath);
     }
 
     private void Start()
@@ -23,5 +24,27 @@ public class PlayerBase : MonoBehaviour
     {
         Health -= damage;
     }
+
+    private void Update()
+    {
+        CheckDeath();
+    }
+
+    void CheckDeath()
+    {
+        if(Health <= 0) { PlayerDied(); }
+    }
+
+    void PlayerDied()
+    {
+        PlayerEvents.playerDeath.Invoke();
+    }
+
+    void OnPlayerDeath()
+    {
+        gameObject.SetActive(false);
+    }
+
+
 
 }

@@ -21,5 +21,6 @@ public class PlayerEvents
 
     public static UnityEvent<int> playerConsumeObject = new UnityEvent<int>();
     public static UnityEvent<int> playerDamageTaken = new UnityEvent<int>();
+    public static UnityEvent playerDeath = new UnityEvent();
 
 }

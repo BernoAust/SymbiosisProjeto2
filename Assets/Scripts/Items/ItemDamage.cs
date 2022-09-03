@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemDamage : MonoBehaviour
 {
 
-    int Damage = 10;
+    int Damage = 100;
 
     private void Start()
     {
