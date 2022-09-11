@@ -12,6 +12,6 @@ public class GameController : MonoBehaviour
 
     void ShowMessage()
     {
-        Debug.Log("Player est� morto.");
+        Debug.Log("Player está morto.");
     }
 }
