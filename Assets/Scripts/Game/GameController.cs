@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(InputPC))]
 public class GameController : MonoBehaviour
 {
     private void Start()
@@ -13,7 +12,6 @@ public class GameController : MonoBehaviour
 
     void ShowMessage()
     {
-        Debug.Log("Player está morto.");
+        Debug.Log("Player estï¿½ morto.");
     }
-
 }
