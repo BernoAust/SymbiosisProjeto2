@@ -15,6 +15,7 @@ public class ItemConsumable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         PlayerEvents.playerConsumeObject.Invoke(Points);
 
         gameObject.SetActive(false);
