@@ -8,11 +8,25 @@ public class PlayerMovement : MonoBehaviour
 {
     float movementSpeed = 5f;
 
+    Animator animator;
+
+    private void Awake() {
+        animator = gameObject.GetComponent<Animator>();
+    }
+
     private void FixedUpdate()
     {
-        float horiontalMovement = Input.GetAxisRaw("Horizontal") * Time.deltaTime * movementSpeed;
-        float verticalMovement = Input.GetAxisRaw("Vertical") * Time.deltaTime * movementSpeed;
+        float horizontalAxis = Input.GetAxisRaw("Horizontal");
+        float verticalAxis = Input.GetAxisRaw("Vertical");
+
+        float horiontalMovement = horizontalAxis * Time.deltaTime * movementSpeed;
+        float verticalMovement = verticalAxis * Time.deltaTime * movementSpeed;
+
+        animator.SetFloat("Horizontal", horizontalAxis);
+        animator.SetFloat("Vertical", verticalAxis);
 
         transform.position += new Vector3(horiontalMovement, verticalMovement, 0);
+
+        animator.SetFloat("Speed", transform.position.magnitude);
     }
 }
