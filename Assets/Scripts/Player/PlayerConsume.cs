@@ -24,6 +24,7 @@ public class PlayerConsume : MonoBehaviour
     void AddPoints(int points)
     {
         Points += points;
+        PlayerEvents.updatePlayerPoints.Invoke(Points);
     }
 
 }

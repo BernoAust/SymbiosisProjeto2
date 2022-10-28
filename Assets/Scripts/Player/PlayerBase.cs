@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerBase : MonoBehaviour
 {
 
-    public int Health;
+    public static int Health = 100;
 
     private void Awake()
     {
@@ -15,14 +15,10 @@ public class PlayerBase : MonoBehaviour
         PlayerEvents.playerDeath.AddListener(OnPlayerDeath);
     }
 
-    private void Start()
-    {
-        Health = 100;
-    }
-
     void TakeDamage(int damage)
     {
         Health -= damage;
+        PlayerEvents.updatePlayerHealth.Invoke(Health);
     }
 
     private void Update()

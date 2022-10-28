@@ -8,6 +8,7 @@ public class PlayerEvents
     // GAMEPLAY
     public static UnityEvent<int> playerConsumeObject = new UnityEvent<int>();
     public static UnityEvent<int> playerDamageTaken = new UnityEvent<int>();
+    public static UnityEvent<int> updatePlayerPoints = new UnityEvent<int>();
+    public static UnityEvent<int> updatePlayerHealth = new UnityEvent<int>();
     public static UnityEvent playerDeath = new UnityEvent();
-
 }
