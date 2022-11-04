@@ -12,9 +12,8 @@ public class MainMenu : MonoBehaviour
     }
 
     public void StartGame() {
-        Debug.Log("StartGame");
-        SceneManager.LoadScene("Farm");
-    } // TODO
+        SceneManager.LoadScene("Farm", LoadSceneMode.Single);
+    }
 
     public void ShowCredits() {
         this.MainMenuGO.SetActive(false);

@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     GameObject Player;
 
-    void Awake()
+    void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
     }

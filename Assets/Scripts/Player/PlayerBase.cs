@@ -6,13 +6,22 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerConsume))]
 public class PlayerBase : MonoBehaviour
 {
+    const int MAX_HEALT = 100;
 
-    public static int Health = 100;
+
+    public static int Health = MAX_HEALT;
 
     private void Awake()
     {
+        this.ResetPlayer();
         PlayerEvents.playerDamageTaken.AddListener(TakeDamage);
         PlayerEvents.playerDeath.AddListener(OnPlayerDeath);
+    }
+
+    void ResetPlayer() {
+        this.gameObject.SetActive(true);
+        Health = MAX_HEALT;
+        PlayerEvents.updatePlayerHealth.Invoke(Health);
     }
 
     void TakeDamage(int damage)

@@ -11,7 +11,7 @@ public class InGameHUD : MonoBehaviour
 
     public Gradient HealthGradient;
 
-    void Awake() {
+    void Start() {
         this.PauseMenu = this.transform.Find("GameHUD/PauseMenu").gameObject;
         this.PointsLabel = this.transform.Find("GameHUD/Points").gameObject.GetComponent<Text>();
         this.HealthSlider = this.transform.Find("GameHUD/LifeBar").gameObject.GetComponent<Slider>();
