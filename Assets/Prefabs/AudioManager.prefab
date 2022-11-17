@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3759290216461141683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3759290216461141684}
+  - component: {fileID: 3759290216461141685}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3759290216461141684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3759290216461141683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3759290216461141685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3759290216461141683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1803691d673bac84a9d1d3081840b5ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Destroy_AnimalHostil
+    clip: {fileID: 8300000, guid: bad6eb3d6d642644eaa3a939ebdcf077, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_AnimalPacifico
+    clip: {fileID: 8300000, guid: 36121e08739abc44dbecd325d6a7402c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_Carro
+    clip: {fileID: 8300000, guid: 70b195468b0b90a45838aa4aae705f4c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_Casa
+    clip: {fileID: 8300000, guid: 8404f2a47dc92274989737426701c7d6, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_CercaMadeira
+    clip: {fileID: 8300000, guid: ec149253e79179e43b6ac70de651acbd, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_Moto
+    clip: {fileID: 8300000, guid: 4e10685a387cfa74e9dc8e6c9555bd92, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_ObjetosJardinagem
+    clip: {fileID: 8300000, guid: 4183731a66b4c4f42870b39ea5f70f5a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_Plants
+    clip: {fileID: 8300000, guid: b64a5c9ece72753459e19ac30a1e7fd7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_Predio
+    clip: {fileID: 8300000, guid: 51ce7b2e02979e04aaa52520dc99a3f1, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_Soldado
+    clip: {fileID: 8300000, guid: 3342d30c3f92e2b46b9950d82423e392, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Destroy_Tanque
+    clip: {fileID: 8300000, guid: e9ab08c5542f784498501b12c7008a72, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Attack_Aranha
+    clip: {fileID: 8300000, guid: 32eb2bc5795c23048a7b9897cae4b80c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Attack_Escorpiao
+    clip: {fileID: 8300000, guid: 30452548a76c4d2428cfe2ba77927562, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Attack_Slime1
+    clip: {fileID: 8300000, guid: 3ef3b5c0ffdf70b43a03e5ff3e0d2e1b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Attack_Slime2
+    clip: {fileID: 8300000, guid: 242ded3f8a3f5cc419773f0331d200cb, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Attack_Slime3
+    clip: {fileID: 8300000, guid: c0538e1d69142ee4ea9ac2363c648688, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Attack_Soldado
+    clip: {fileID: 8300000, guid: 73c09c2698c2cbb45bca14f8995390f6, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Attack_Tanque
+    clip: {fileID: 8300000, guid: 4c6238551dd88134dacf6de53047e76e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Attack_Tanque
+    clip: {fileID: 8300000, guid: 4c6238551dd88134dacf6de53047e76e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: HUD_Click
+    clip: {fileID: 8300000, guid: f236cef5258c81e4db91f94a4c7f2fab, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}

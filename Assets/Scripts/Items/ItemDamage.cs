@@ -19,6 +19,6 @@ public class ItemDamage : MonoBehaviour
 
         gameObject.SetActive(false);
 
-    }
+    }   
 
 }
