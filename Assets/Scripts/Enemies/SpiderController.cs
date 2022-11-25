@@ -10,6 +10,7 @@ public class SpiderController : MonoBehaviour
 
     IEnumerator AttackCoroutine = null;
     Vector3 NextPosition;
+    Transform PlayerTransform;
 
     void Awake() {
         this.NextPosition = this.transform.position;
@@ -18,6 +19,7 @@ public class SpiderController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == PLAYER_TAG) {
+            this.PlayerTransform = other.gameObject.transform;
             this.AttackCoroutine = this.Attack(other.transform);
             StartCoroutine(AttackCoroutine);
         }
@@ -26,6 +28,7 @@ public class SpiderController : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == PLAYER_TAG) {
+            this.PlayerTransform = null;
             StopCoroutine(this.AttackCoroutine);
         }
     }
@@ -43,7 +46,12 @@ public class SpiderController : MonoBehaviour
 
     IEnumerator Attack(Transform playerTransform) {
         while (true) {
+            if (this.PlayerTransform != null) {
+                this.transform.right = this.PlayerTransform.position - this.transform.position;
+            }
+
             this.NextPosition = playerTransform.position;
+
             yield return new WaitForSeconds(ATTACK_INTERVAL);
         }
     }
