@@ -39,8 +39,8 @@ public class PlayerBase : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        // Health -= damage;
-        // PlayerEvents.updatePlayerHealth.Invoke(Health);
+        Health -= damage;
+        PlayerEvents.updatePlayerHealth.Invoke(Health);
     }
 
     void CheckDeath()
@@ -90,7 +90,7 @@ public class PlayerBase : MonoBehaviour
     }
 
     void ConsumePoints(int points) {
-        this.PlayerPoints += points;
+        this.PlayerPoints = points;
     }
 
     void Update() {
