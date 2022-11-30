@@ -17,13 +17,13 @@ public class PlayerConsume : MonoBehaviour
     private void Start()
     {
         GetComponent<Rigidbody2D>().gravityScale = 0;
-        GetComponent<BoxCollider2D>().isTrigger = true;
         Points = 0;
     }
 
     void AddPoints(int points)
     {
         Points += points;
+        PlayerEvents.updatePlayerPoints.Invoke(Points);
     }
 
 }

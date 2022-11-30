@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Spider
   layers:
   - Default
   - TransparentFX
@@ -11,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -40,4 +41,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3135357369
+    locked: 0
+  - name: Structure
+    uniqueID: 1468226229
+    locked: 0
+  - name: Consumables
+    uniqueID: 487921441
+    locked: 0
+  - name: ItemDamage
+    uniqueID: 1275005473
+    locked: 0
+  - name: Ground
+    uniqueID: 4219861547
+    locked: 0
+  - name: Enemy
+    uniqueID: 676850635
     locked: 0

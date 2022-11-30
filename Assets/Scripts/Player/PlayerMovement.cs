@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     //GENERAL MOVEMENT
 
-    float movementSpeed = 5f;
+    float movementSpeed = 10f;
     float horizontalAxis;
     float verticalAxis;
 
