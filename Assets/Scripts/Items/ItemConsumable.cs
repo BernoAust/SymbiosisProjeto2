@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemConsumable : MonoBehaviour
 {
 
-    int Points = 10;
+    public int Points = 10;
 
     private void Start()
     {
@@ -17,9 +17,15 @@ public class ItemConsumable : MonoBehaviour
     {
 
         PlayerEvents.playerConsumeObject.Invoke(Points);
-
+        
+        PlayAudio(gameObject.tag);
         gameObject.SetActive(false);
 
+    }
+
+    private void PlayAudio(string type)
+    {
+        AudioEvent.playAudio.Invoke($"Destroy_{type}");
     }
 
 }

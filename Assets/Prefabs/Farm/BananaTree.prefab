@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9140549244474475386}
   m_Layer: 0
   m_Name: BananaTree
-  m_TagString: Untagged
+  m_TagString: Plants
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -124,3 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44af09cf8956aae4697799e322023c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Points: 10

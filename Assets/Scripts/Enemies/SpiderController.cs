@@ -36,6 +36,8 @@ public class SpiderController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if (other.transform.tag == PLAYER_TAG) {
             PlayerEvents.playerDamageTaken.Invoke(DAMAGE);
+            AudioEvent.playAudio.Invoke("Attack_Slime1");
+            AudioEvent.playAudio.Invoke("Destroy_AnimalHostil");
             Destroy(this.gameObject);
         }
     }
