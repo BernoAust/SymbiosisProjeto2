@@ -60,13 +60,13 @@ public class PlayerBase : MonoBehaviour
                 float newScaleY = scaleY;
 
             if (shouldEnterPhaseOne) {
-                newScaleX = scaleX * 1.2f;
-                newScaleY = scaleY * 1.2f;
+                newScaleX = scaleX * 1.5f;
+                newScaleY = scaleY * 1.5f;
 
                 this.hasGrownFirstPhase = true;
             } else if (shouldEnterPhaseTwo) {
-                newScaleX = scaleX * 1.5f;
-                newScaleY = scaleY * 1.5f;
+                newScaleX = scaleX * 2.0f;
+                newScaleY = scaleY * 2.0f;
 
                 this.hasGrownSecondPhase = true;
             }

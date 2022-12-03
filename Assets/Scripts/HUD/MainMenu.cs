@@ -12,20 +12,24 @@ public class MainMenu : MonoBehaviour
     }
 
     public void StartGame() {
+        AudioEvent.playAudio.Invoke("HUD_Click");
         SceneManager.LoadScene("Farm", LoadSceneMode.Single);
     }
 
     public void ShowCredits() {
+        AudioEvent.playAudio.Invoke("HUD_Click");
         this.MainMenuGO.SetActive(false);
         this.Credits.SetActive(true);
     }
 
     public void ShowMainMenu() {
+        AudioEvent.playAudio.Invoke("HUD_Click");
         this.MainMenuGO.SetActive(true);
         this.Credits.SetActive(false);
     }
 
     public void ExitGame() {
+        AudioEvent.playAudio.Invoke("HUD_Click");
         Application.Quit();
     }
 }

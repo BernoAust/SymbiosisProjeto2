@@ -26,16 +26,19 @@ public class InGameHUD : MonoBehaviour
     }
 
     public void OnPausePress() {
+        AudioEvent.playAudio.Invoke("HUD_Click");
         Time.timeScale = 0f;
         this.PauseMenu.SetActive(true);
     }
 
     public void OnContinuePress() {
+        AudioEvent.playAudio.Invoke("HUD_Click");
         this.PauseMenu.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public void OnExitPress() {
+        AudioEvent.playAudio.Invoke("HUD_Click");
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
     }
