@@ -9,6 +9,8 @@ TagManager:
   - AnimalPacifico
   - Predio
   - Casa
+  - Soldado
+  - Tanque
   layers:
   - Default
   - TransparentFX
