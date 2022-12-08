@@ -11,9 +11,12 @@ public class SpiderController : MonoBehaviour
     IEnumerator AttackCoroutine = null;
     Vector3 NextPosition;
     Transform PlayerTransform;
+    Animator animator;
 
     void Awake() {
         this.NextPosition = this.transform.position;
+        animator = gameObject.GetComponent<Animator>();
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -35,10 +38,11 @@ public class SpiderController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.transform.tag == PLAYER_TAG) {
+            animator.Play("AranhaAttack");
             PlayerEvents.playerDamageTaken.Invoke(DAMAGE);
             AudioEvent.playAudio.Invoke("Attack_Slime1");
             AudioEvent.playAudio.Invoke("Destroy_AnimalHostil");
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, 0.1f);
         }
     }
 
