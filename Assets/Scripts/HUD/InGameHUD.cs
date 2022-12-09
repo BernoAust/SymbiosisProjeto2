@@ -54,7 +54,6 @@ public class InGameHUD : MonoBehaviour
 
     public void OnNextLevelPress() {
         Time.timeScale = 1;
-        // TODO Load next scene
-        // SceneManager.LoadScene("CityMap");
+        SceneManager.LoadScene("City");
     }
 }
