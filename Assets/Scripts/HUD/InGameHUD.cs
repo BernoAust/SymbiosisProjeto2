@@ -51,4 +51,10 @@ public class InGameHUD : MonoBehaviour
         this.HealthSlider.value = health;
         this.HealthFilling.color = this.HealthGradient.Evaluate(this.HealthSlider.normalizedValue);
     }
+
+    public void OnNextLevelPress() {
+        Time.timeScale = 1;
+        // TODO Load next scene
+        // SceneManager.LoadScene("CityMap");
+    }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemConsumable : MonoBehaviour
 {
 
-    public int Points = 10;
+    public int Points;
 
     private void Start()
     {
