@@ -11,7 +11,7 @@ public class PlayerBase : MonoBehaviour
 
     public static int Health = MAX_HEALT;
     
-    int PlayerPoints = 0;
+    int PlayerPoints = 1750;
     bool hasGrownFirstPhase = false;
     bool hasGrownSecondPhase = false;
     Vector3 BaseScale;
@@ -39,8 +39,8 @@ public class PlayerBase : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        Health -= damage;
-        PlayerEvents.updatePlayerHealth.Invoke(Health);
+        // Health -= damage;
+        // PlayerEvents.updatePlayerHealth.Invoke(Health);
     }
 
     void CheckDeath()

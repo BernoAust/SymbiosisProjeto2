@@ -6,6 +6,8 @@ public class ScorpionController : MonoBehaviour
 {
     public GameObject BulletPrefab;
     public Transform BulletSpawner;
+    public int Damage;
+    public int Points;
 
     GameObject PlayerGO;
     Animator ScorpionAnimator;
@@ -25,6 +27,14 @@ public class ScorpionController : MonoBehaviour
         if (other.tag == "Player") {
             this.PlayerGO = null;
             this.ScorpionAnimator.SetBool("isAttacking", false);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag == "Player") {
+            PlayerEvents.playerDamageTaken.Invoke(Damage);
+            PlayerEvents.updatePlayerPoints.Invoke(Points);
+            Destroy(this.gameObject);
         }
     }
 

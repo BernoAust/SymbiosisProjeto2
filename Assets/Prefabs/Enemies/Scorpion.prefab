@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 7150494575138918795}
   - component: {fileID: 7150494575138918794}
   - component: {fileID: 7150494575138918789}
+  - component: {fileID: 1240267457029414604}
   - component: {fileID: 7150494575138918788}
   - component: {fileID: 5374641797559650720}
-  - component: {fileID: 8303338580564235878}
   m_Layer: 0
   m_Name: Scorpion
   m_TagString: Untagged
@@ -133,7 +133,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18, y: 0.06}
+  m_Offset: {x: 0.17, y: 0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -145,6 +145,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.15, y: 2.35}
+  m_EdgeRadius: 0
+--- !u!61 &1240267457029414604
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150494575138918791}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.18, y: 0.06}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.78125, y: 4.125}
+    newSize: {x: 1.21, y: 1.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 25.01, y: 13.9}
   m_EdgeRadius: 0
 --- !u!95 &7150494575138918788
 Animator:
@@ -180,19 +206,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 2871032527032594637, guid: 3333c184556b0dd4db77b83882ac57ae, type: 3}
   BulletSpawner: {fileID: 9031919932868226079}
---- !u!58 &8303338580564235878
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7150494575138918791}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.18, y: 0.06}
-  serializedVersion: 2
-  m_Radius: 6.5
+  Damage: 10
+  Points: 250
