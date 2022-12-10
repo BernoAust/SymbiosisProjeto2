@@ -10,17 +10,23 @@ public class SoldierController : MonoBehaviour
     public int Points;
 
     GameObject PlayerGO;
+    Animator SoldierAnimator;
+
+    void Awake() {
+        this.SoldierAnimator = this.gameObject.GetComponent<Animator>();
+        this.PlayerGO = GameObject.FindGameObjectWithTag("Player");
+    }
 
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
-            this.PlayerGO = other.gameObject;
+            SoldierAnimator.SetBool("isAttackMode", true);
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.tag == "Player") {
-            this.PlayerGO = null;
+            SoldierAnimator.SetBool("isAttackMode", false);
         }
     }
 

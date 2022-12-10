@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
-    const int SPEED = 15;
+    const int SPEED = 3;
     const int LIFETIME_SECONDS = 3;
 
     public int Damage;
