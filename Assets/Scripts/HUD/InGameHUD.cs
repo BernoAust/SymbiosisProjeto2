@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class InGameHUD : MonoBehaviour
 {
     GameObject PauseMenu;
+    GameObject DeathMenu;
     Text PointsLabel;
     Slider HealthSlider;
     Image HealthFilling;
@@ -13,6 +14,7 @@ public class InGameHUD : MonoBehaviour
 
     void Start() {
         this.PauseMenu = this.transform.Find("GameHUD/PauseMenu").gameObject;
+        this.DeathMenu = this.transform.Find("GameHUD/DeathMenu").gameObject;
         this.PointsLabel = this.transform.Find("GameHUD/Points").gameObject.GetComponent<Text>();
         this.HealthSlider = this.transform.Find("GameHUD/LifeBar").gameObject.GetComponent<Slider>();
         this.HealthFilling = this.transform.Find("GameHUD/LifeBar/Inner").gameObject.GetComponent<Image>();
@@ -23,6 +25,7 @@ public class InGameHUD : MonoBehaviour
 
         PlayerEvents.updatePlayerPoints.AddListener(UpdatePoints);
         PlayerEvents.updatePlayerHealth.AddListener(UpdateHealth);
+        PlayerEvents.playerDeath.AddListener(ShowDeathMenu);
     }
 
     public void OnPausePress() {
@@ -53,7 +56,12 @@ public class InGameHUD : MonoBehaviour
     }
 
     public void OnNextLevelPress() {
-        Time.timeScale = 1;
+        AudioEvent.playAudio.Invoke("HUD_Click");
         SceneManager.LoadScene("City");
+        Time.timeScale = 1f;
+    }
+
+    void ShowDeathMenu() {
+        this.DeathMenu.SetActive(true);
     }
 }
