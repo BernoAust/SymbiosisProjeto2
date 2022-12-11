@@ -41,6 +41,12 @@ public class ScorpionController : MonoBehaviour
     private void FixedUpdate() {
         if (this.PlayerGO != null) {
             this.transform.right = this.PlayerGO.transform.position - this.transform.position;
+            this.transform.rotation = new Quaternion(
+                0,
+                this.transform.rotation.y,
+                this.transform.rotation.z,
+                this.transform.rotation.w
+            );
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class InGameHUD : MonoBehaviour
 {
+    GameObject Joysticks;
     GameObject PauseMenu;
     GameObject DeathMenu;
     Text PointsLabel;
@@ -14,6 +15,7 @@ public class InGameHUD : MonoBehaviour
 
     void Start() {
         this.PauseMenu = this.transform.Find("GameHUD/PauseMenu").gameObject;
+        this.Joysticks = this.transform.Find("Joystick").gameObject;
         this.DeathMenu = this.transform.Find("GameHUD/DeathMenu").gameObject;
         this.PointsLabel = this.transform.Find("GameHUD/Points").gameObject.GetComponent<Text>();
         this.HealthSlider = this.transform.Find("GameHUD/LifeBar").gameObject.GetComponent<Slider>();
@@ -62,6 +64,7 @@ public class InGameHUD : MonoBehaviour
     }
 
     void ShowDeathMenu() {
+        this.Joysticks.SetActive(false);
         this.DeathMenu.SetActive(true);
     }
 }
