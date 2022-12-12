@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 2871032527032594637, guid: 6c47e51339f405e43ab212bcb482f9c9, type: 3}
   BulletSpawner: {fileID: 27961827474185022}
-  Damage: 10
+  Damage: 0
   Points: 50
 --- !u!58 &1932926264702226396
 CircleCollider2D:

@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
-    const int SPEED = 15;
     const int LIFETIME_SECONDS = 3;
 
     public int Damage;
+    public int Speed;
 
     Vector3 PlayerPosition;
     IEnumerator Coroutine;
-
-    
 
     void Awake() {
         this.PlayerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -35,11 +33,11 @@ public class Bullets : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Player") {
             PlayerEvents.playerDamageTaken.Invoke(Damage);
-            Destroy(this.gameObject);
         }
+        Destroy(this.gameObject);
     }
 
     private void FixedUpdate() {
-        this.transform.Translate(Vector2.right * SPEED * Time.deltaTime);
+        this.transform.Translate(Vector2.right * this.Speed * Time.deltaTime);
     }
 }
