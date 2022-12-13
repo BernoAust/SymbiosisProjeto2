@@ -52,9 +52,6 @@ TagManager:
   - name: Player
     uniqueID: 3135357369
     locked: 0
-  - name: Structure
-    uniqueID: 1468226229
-    locked: 0
   - name: Consumables
     uniqueID: 487921441
     locked: 0
@@ -63,6 +60,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 4219861547
+    locked: 0
+  - name: Structure
+    uniqueID: 1468226229
     locked: 0
   - name: Enemy
     uniqueID: 676850635

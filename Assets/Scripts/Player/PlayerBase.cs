@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerConsume))]
 public class PlayerBase : MonoBehaviour
 {
-    const int MAX_HEALT = 100;
+    const int MAX_HEALT = 120;
     const int PHASE_1_POINTS = 500;
     const int PHASE_2_POINTS = 1025;
 
@@ -41,6 +41,7 @@ public class PlayerBase : MonoBehaviour
     {
         Health -= damage;
         PlayerEvents.updatePlayerHealth.Invoke(Health);
+        AudioEvent.playAudio.Invoke("Attack_Slime3");
     }
 
     void CheckDeath()

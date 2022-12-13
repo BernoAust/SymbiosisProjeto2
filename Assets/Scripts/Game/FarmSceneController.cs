@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FarmSceneController : MonoBehaviour
 {
-    const int POINTS_TO_NEXT_LEVEL = 1750;
+    public int POINTS_TO_NEXT_LEVEL = 2000;
 
     public GameObject EndLevelScene;
 
@@ -11,7 +11,7 @@ public class FarmSceneController : MonoBehaviour
     }
 
     void CheckPlayerPoints(int points) {
-        if (points == POINTS_TO_NEXT_LEVEL) {
+        if (points >= POINTS_TO_NEXT_LEVEL) {
             Time.timeScale = 0;
             EndLevelScene.SetActive(true);
         }

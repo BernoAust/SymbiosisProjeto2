@@ -33,7 +33,9 @@ public class ScorpionController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Player") {
             PlayerEvents.playerDamageTaken.Invoke(Damage);
-            PlayerEvents.updatePlayerPoints.Invoke(Points);
+            PlayerEvents.playerConsumeObject.Invoke(Points);
+            AudioEvent.playAudio.Invoke("Destroy_AnimalHostil");
+            AudioEvent.playAudio.Invoke("Attack_Slime1");
             Destroy(this.gameObject);
         }
     }
@@ -57,6 +59,7 @@ public class ScorpionController : MonoBehaviour
                 this.BulletSpawner.position,
                 Quaternion.identity
             );
+            AudioEvent.playAudio.Invoke("Attack_Escorpiao");
         }
     }
 }

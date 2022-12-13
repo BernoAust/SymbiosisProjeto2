@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame() {
         AudioEvent.playAudio.Invoke("HUD_Click");
-        SceneManager.LoadScene("Farm", LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ShowCredits() {

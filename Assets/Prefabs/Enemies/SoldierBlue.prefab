@@ -150,7 +150,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 2871032527032594637, guid: 6c47e51339f405e43ab212bcb482f9c9, type: 3}
   BulletSpawner: {fileID: 27961827474185022}
   Damage: 0
-  Points: 50
+  Points: 70
 --- !u!58 &1932926264702226396
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 4
 --- !u!1 &8210777257760401052
 GameObject:
   m_ObjectHideFlags: 0

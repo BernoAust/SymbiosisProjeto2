@@ -34,7 +34,9 @@ public class TankController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Player") {
             PlayerEvents.playerDamageTaken.Invoke(Damage);
-            PlayerEvents.updatePlayerPoints.Invoke(Points);
+            PlayerEvents.playerConsumeObject.Invoke(Points);
+            AudioEvent.playAudio.Invoke("Destroy_Tanque");
+            AudioEvent.playAudio.Invoke("Attack_Slime2");
             Destroy(this.gameObject);
         }
     }
@@ -52,6 +54,7 @@ public class TankController : MonoBehaviour
                 this.BulletSpawner.position,
                 Quaternion.identity
             );
+            AudioEvent.playAudio.Invoke("Attack_Tanque");
         }
     }
 }

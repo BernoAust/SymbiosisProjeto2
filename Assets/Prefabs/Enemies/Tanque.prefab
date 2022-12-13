@@ -104,7 +104,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.22999999, y: 0.07, z: 0.03, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.19, y: 0.96}
     newSize: {x: 1.19, y: 0.96}
@@ -150,7 +150,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 2871032527032594637, guid: 8d7c518785eb27d4c9458b0359847ce8, type: 3}
   BulletSpawner: {fileID: 1541954722194286137}
   Damage: 0
-  Points: 150
+  Points: 350
 --- !u!58 &2197915774504480987
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 2.5
 --- !u!1 &7305979319028289729
 GameObject:
   m_ObjectHideFlags: 0

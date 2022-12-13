@@ -41,7 +41,6 @@ public class SpiderController : MonoBehaviour
         if (other.transform.tag == PLAYER_TAG) {
             animator.Play("AranhaAttack");
             PlayerEvents.playerDamageTaken.Invoke(Damage);
-            PlayerEvents.updatePlayerPoints.Invoke(Points);
             AudioEvent.playAudio.Invoke("Attack_Aranha");
             AudioEvent.playAudio.Invoke("Attack_Slime1");
             PlayerEvents.playerConsumeObject.Invoke(Points);

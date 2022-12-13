@@ -48,6 +48,12 @@ public class InGameHUD : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void RestartScene()
+    {
+        AudioEvent.playAudio.Invoke("HUD_Click");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     void UpdatePoints(int points) {
         this.PointsLabel.text = points.ToString();
     }
@@ -59,7 +65,7 @@ public class InGameHUD : MonoBehaviour
 
     public void OnNextLevelPress() {
         AudioEvent.playAudio.Invoke("HUD_Click");
-        SceneManager.LoadScene("City");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1f;
     }
 
